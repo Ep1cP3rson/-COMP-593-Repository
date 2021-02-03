@@ -1,1 +1,24 @@
 
+from pyfiglet import Figlet
+
+#Instantiate a Figlet Object
+figlet = Figlet()
+
+#Prompt the user to select a font
+selectedFont = int(input("Select a font: \n 1. z-pilot_ \n 2. eftirobot \n 3. flyn_sh \n 4. war_of_w \n 5. runic >>> "))
+if selectedFont == 1:
+  output = Figlet(font='z-pilot_')
+elif selectedFont == 2:
+  output = Figlet(font='eftirobot')
+elif selectedFont == 3:
+  output = Figlet(font='flyn_sh')
+elif selectedFont == 4:
+  output = Figlet(font='war_of_w')
+elif selectedFont == 5:
+  output = Figlet(font='runic')
+else:
+  print ("that is not a valid option")
+#Prompt the user to type a message
+# ... ... ...
+inputText = input(str("what would you like to say?"))
+print (output.renderText(inputText))
